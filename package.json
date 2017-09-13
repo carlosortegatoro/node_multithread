@@ -1,0 +1,23 @@
+{
+  "name": "node_multithread",
+  "version": "1.0.0",
+  "description": "Prueba multithread Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosortegatoro/node_multithread.git"
+  },
+  "keywords": [
+    "multithread",
+    "node.js"
+  ],
+  "author": "carlos ortega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosortegatoro/node_multithread/issues"
+  },
+  "homepage": "https://github.com/carlosortegatoro/node_multithread#readme"
+}
