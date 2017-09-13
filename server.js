@@ -1,6 +1,6 @@
 const throng = require('throng');
 
-const WORKERS = process.env.WEB_CONCURRENCY || 10;
+const WORKERS = process.env.WEB_CONCURRENCY || 100;
 const PORT = process.env.PORT || 143;
 const BLITZ_KEY = process.env.BLITZ_KEY;
 
