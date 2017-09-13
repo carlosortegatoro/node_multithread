@@ -1,27 +1,56 @@
-var express = require('express'),
-  app = express(),
-  port = process.env.PORT || 143,
-  //mongoose = require('mongoose'),
-  //Task = require('./api/models/todoListModel'), //created model loading here
-  bodyParser = require('body-parser');
-  
-// mongoose instance connection url connection
-//mongoose.Promise = global.Promise;
-//mongoose.connect('mongodb://localhost/Tododb');
+const throng = require('throng');
 
+const WORKERS = process.env.WEB_CONCURRENCY || 10;
+const PORT = process.env.PORT || 143;
+const BLITZ_KEY = process.env.BLITZ_KEY;
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+throng({
+  workers: WORKERS,
+  lifetime: Infinity
+}, start);
 
+function start() {
+  const crypto = require('crypto');
+  const express = require('express');
+  const blitz = require('blitzkrieg');
+  const app = express();
 
-//var routes = require('./api/routes/todoListRoutes'); //importing route
-//routes(app); //register the route
+  app
+    .use(blitz(BLITZ_KEY))
+    .get('/cpu', cpuBound)
+    .get('/memory', memoryBound)
+    .get('/io', ioBound)
+    .get('/get', getResponse)
+    .listen(PORT, onListen);
 
-app.listen(port);
+  function cpuBound(req, res, next) {
+    const key = Math.random() < 0.5 ? 'ninjaturtles' : 'powerrangers';
+    const hmac = crypto.createHmac('sha512WithRSAEncryption', key);
+    const date = Date.now() + '';
+    hmac.setEncoding('base64');
+    hmac.end(date, () => res.send('A hashed date for you! ' + hmac.read()));
+  }
 
-app.use(function(req, res) {
-  //console.log('Time: ', Date.now() ,'. Body: ' + req.body);
-  res.json({ message : 'everything is ok'});
-});
+  function memoryBound(req, res, next) {
+    const hundredk = new Array(100 * 1024).join('X');
+    setTimeout(function sendResponse() {
+      res.send('Large response: ' + hundredk);
+    }, 20).unref();
+  }
 
-console.log('todo list RESTful API server started on: ' + port);
+  function ioBound(req, res, next) {
+    setTimeout(function SimulateDb() {
+      res.send('Got response from fake db!');
+    }, 300).unref();
+  }
+
+  function getResponse(req, res, next) {
+  	setTimeout(function SimulateDb() {
+      res.json({ message : 'everything is ok'});
+    },20).unref();
+  }
+
+  function onListen() {
+    console.log('Listening on', PORT);
+  }
+}
