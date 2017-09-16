@@ -1,7 +1,7 @@
 const throng = require('throng');
 
-const WORKERS = process.env.WEB_CONCURRENCY || 100;
-const PORT = process.env.PORT || 143;
+const WORKERS = process.env.WEB_CONCURRENCY || 500;
+const PORT = process.env.PORT || 5000;
 const BLITZ_KEY = process.env.BLITZ_KEY;
 
 throng({
@@ -35,7 +35,7 @@ function start() {
     const hundredk = new Array(100 * 1024).join('X');
     setTimeout(function sendResponse() {
       res.send('Large response: ' + hundredk);
-    }, 20).unref();
+    }, 300).unref();
   }
 
   function ioBound(req, res, next) {
@@ -47,7 +47,7 @@ function start() {
   function getResponse(req, res, next) {
   	setTimeout(function SimulateDb() {
       res.json({ message : 'everything is ok'});
-    },20).unref();
+    },300).unref();
   }
 
   function onListen() {
