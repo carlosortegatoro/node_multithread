@@ -17,7 +17,7 @@ function start() {
 
   app
     .get('/get', getResponse)
-    .port('/post', postResponse)
+    .post('/post', postResponse)
     .listen(PORT, onListen);
 
 
