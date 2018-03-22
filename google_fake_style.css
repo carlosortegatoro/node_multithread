@@ -1,0 +1,264 @@
+body {
+	font-family: arial,sans-serif;
+	color: #222;
+}
+
+._mB {
+  background-color: #efc439;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 2px;
+  line-height: 14px;
+  vertical-align: baseline;
+}
+
+._mB_green {
+  background-color: #59946B;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 2px;
+  line-height: 14px;
+  vertical-align: baseline;
+}
+
+div.goopreview {
+	font-size:small;
+	margin-top:45px;
+    margin-bottom:10px;
+    clear: both;
+}
+
+a.headline {
+	color:#1a0dab;
+}
+
+a.headline {
+	font-size:18px;
+	font-weight: normal;
+}
+
+a.headline:hover {
+	color:#1a0dab;
+}
+
+span.displayurl {
+	color:#006621;
+	font-size:14px;
+  margin-left:2px;
+}
+
+span.description {
+	font-size:small;
+	color:#545454;
+}
+
+div.urlline {
+	margin-top:-4px;
+	margin-bottom:0px;
+}
+
+div.input-group.input-group.col-sm-10 {
+	margin-bottom:8px;
+}
+
+div.input-group.input-group.col-sm-8 {
+	margin-bottom:5px;
+}
+
+h1.title {
+	margin-bottom:20px;
+}
+
+div.input-group-addon.addon-white {
+	background-color: #ffffff;
+}
+
+a.sitelink {
+	color:#1a0dab;
+}
+
+div.sitelinks {
+	margin-top:-3px;
+}
+
+div.input-group-addon {
+    min-width:110px;
+    text-align:left;
+}
+
+div.rating {
+	color:#808080;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+span.stars {
+	color:#e7711b;
+}
+
+span._ayg {
+  background: url(https://www.google.co.uk/images/nav_logo195.png) no-repeat -100px -275px;
+  display: inline-block;
+  height: 13px;
+  overflow: hidden;
+  position: relative;
+  top: 1px;
+  width: 65px;
+
+}
+
+span.callextension {
+	color: #545454;
+  font-size: small;
+  margin-left: 8px;
+}
+
+ol li {
+  list-style: none;
+}
+
+._gBb {
+  margin: 0 -13px -2px 0;
+  padding: 4px 0 3px 28px;
+  width: 526px;
+}
+
+._gBb>li {
+  display: inline-block;
+  padding: 0px 13px 2px 0px;
+  vertical-align: top;
+  width: 50%;
+}
+
+._gB3 {
+  margin: 0 -13px -2px 0;
+  padding: 4px 0 3px 0px;
+  width: 526px;
+}
+
+._gB3>li {
+  display: inline;
+  padding: 0px 0px 2px 0px;
+  vertical-align: top;
+  width: 50%;
+}
+
+._G8 {
+  margin: 0 -13px -2px 0;
+  padding: 13px 0 3px 28px;
+  width: 614px;
+}
+
+._G8>li {
+  display: inline;
+  padding: 0 0 16px 0;
+  vertical-align: top;
+  width: 50%;
+  float:left;
+  line-height:inherit;
+}
+
+._G8 H3 {
+  font-size: 18px;
+  font-weight:normal;
+  padding:0 0 3px 0;
+  margin:0;
+  display: block;
+}
+
+div.survey {
+  left: 10px;
+  bottom: 0;
+  background-color: #333333;
+  color: #fff;
+  position: fixed;
+  z-index: 4;
+  padding: 1em;
+  padding-bottom:15px;
+  width:302px;
+  height:200px;
+  display:none;
+  -webkit-border-radius:6px 6px 0px 0px;
+  -moz-border-radius:6px 6px 0px 0px;
+  border-radius:6px 6px 0px 0px;
+  opacity: 0.93;
+  filter: alpha(opacity=93); /* For IE8 and earlier */
+}
+
+div.questions {
+  padding:0px 0px 0px 25px;
+  font-weight: normal;
+}
+
+label.radio {
+  font-weight: normal;
+}
+
+div.row.foot {
+  margin-top:50px;
+  border-top:2px solid #ececec;
+  padding-top:10px;
+  text-align:center;
+}
+
+ul.callouts li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  padding:0;
+  margin:0;
+}
+
+div.callouts {
+  color:#545454;
+
+}
+
+div.snippets {
+  color:#545454;
+
+}
+
+ul.snippets li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  padding:0;
+  margin:0;
+}
+
+div.review {
+   color:#545454;
+   margin-top:-3px;
+}
+
+label.email {
+  padding-bottom:20px;
+  padding-top:10px;
+}
+
+input[type=email] {
+  color:#000000;
+  padding:2px 0px 2px 4px;
+}
+
+div.thanks {
+  padding-bottom:30px;
+}
+
+div.thanks a {
+  color:#ffffff;
+}
+
+span.source {
+  color:#808080;
+}
+
+span.reviewQuote {
+  font-size:15px;
+  font-weight: 500;
+}
